@@ -41,10 +41,10 @@ export default function Hero(): React.JSX.Element {
         {/* Imagem de Fundo com Overlay */}
         <div className="absolute inset-0 z-0 opacity-40 brightness-50">
           <Image
-            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070&auto=format&fit=crop"
+            src="/banner-2.png"
             alt="Interior de luxo da Barbearia Dom Cortês"
             fill
-            className="object-cover opacity-50"
+            className="object-cover opacity-60 "
             priority
           />
         </div>
@@ -53,7 +53,7 @@ export default function Hero(): React.JSX.Element {
         <div className="absolute inset-0 z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px]" />
 
         {/* Gradiente de Profundidade (Radial e Linear) */}
-        <div className="absolute inset-0 z-20 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-zinc-950/50" />
+        <div className="absolute inset-0 z-20 bg-linear-to-t from-zinc-950 via-zinc-950/20 to-zinc-950/50" />
         <div className="absolute inset-0 z-20 bg-[radial-gradient(circle_at_center,transparent_0%,#09090b_100%)]" />
       </div>
 
@@ -62,7 +62,7 @@ export default function Hero(): React.JSX.Element {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-30 max-w-5xl mx-auto px-6 text-center space-y-8"
+        className="relative flex flex-col items-center justify-center z-30 max-w-5xl mx-auto px-6 text-center space-y-8"
       >
         {/* Localização Badge */}
         <motion.span
@@ -114,6 +114,7 @@ export default function Hero(): React.JSX.Element {
 
           <Button
             variant="outline"
+            onClick={() => window.location.href = "#servicos"}
             size="lg"
             className="w-full md:w-auto h-16 px-10 border-zinc-800 text-zinc-300 hover:bg-success hover:text-background transition-all rounded-none font-bold uppercase tracking-widest"
           >
@@ -130,7 +131,7 @@ export default function Hero(): React.JSX.Element {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-30"
       >
-        <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent" />
+        <div className="w-px h-12 bg-linear-to-b from-primary to-transparent" />
       </motion.div>
     </section>
   );

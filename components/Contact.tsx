@@ -11,7 +11,7 @@ import {
   MessageCircle,
   ArrowUpRight,
 } from "lucide-react";
-import { IoLogoInstagram } from "react-icons/io";
+import { IoLogoInstagram, IoLogoWhatsapp } from "react-icons/io";
 
 // --- Interfaces de Tipagem ---
 
@@ -145,9 +145,9 @@ export default function Contact(): React.JSX.Element {
 
             <Button
               size="lg"
-              className="w-full h-16 bg-primary text-primary-foreground font-black uppercase tracking-widest rounded-none shadow-xl shadow-primary/10 group"
+              className="w-full h-16 bg-primary text-primary-foreground font-black hover:bg-success/80 transition-all duration-300 uppercase tracking-widest rounded-none shadow-xl shadow-primary/10 group"
             >
-              <MessageCircle className="mr-2 w-5 h-5" />
+              <IoLogoWhatsapp className="mr-2 w-10 h-10" />
               Chamar no WhatsApp
             </Button>
           </motion.div>

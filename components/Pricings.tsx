@@ -1,83 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { motion, Variants } from "motion/react";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Scissors, Star } from "lucide-react";
-
-// --- Interfaces de Tipagem ---
-
-interface PriceItem {
-  name: string;
-  description: string;
-  price: string;
-}
-
-interface PriceCategory {
-  title: string;
-  items: PriceItem[];
-}
-
-// --- Dados (Baseados no seu PRD) ---
-
-const priceCategories: PriceCategory[] = [
-  {
-    title: "Cortes & Estilo",
-    items: [
-      {
-        name: "Corte Degradê",
-        description: "Técnica de fade com acabamento navalhado.",
-        price: "R$ 45,50",
-      },
-      {
-        name: "Corte Social",
-        description: "O clássico adaptado ao seu perfil.",
-        price: "R$ 40,00",
-      },
-      {
-        name: "Corte na Tesoura",
-        description: "Caimento natural e corte artesanal.",
-        price: "R$ 50,00",
-      },
-      {
-        name: "Pezinho & Acabamento",
-        description: "Alinhamento de contornos e nuca.",
-        price: "R$ 15,00",
-      },
-    ],
-  },
-  {
-    title: "Barba & Cuidados",
-    items: [
-      {
-        name: "Barba Completa",
-        description: "Modelagem com toalha quente e balm.",
-        price: "R$ 35,00",
-      },
-      {
-        name: "Combo Dom Cortês",
-        description: "Corte Degradê + Barba Completa.",
-        price: "R$ 75,00",
-      },
-      {
-        name: "Sobrancelha",
-        description: "Alinhamento para harmonização facial.",
-        price: "R$ 10,00",
-      },
-      {
-        name: "Barboterapia",
-        description: "Ritual completo de relaxamento e hidratação.",
-        price: "R$ 45,00",
-      },
-    ],
-  },
-];
+import { priceCategories } from "@/data/prices";
 
 export default function Pricings(): React.JSX.Element {
-  const [pricing, setPricing] = useState(priceCategories);
-
   const fadeInUp: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -95,12 +25,12 @@ export default function Pricings(): React.JSX.Element {
       {/* ─── BACKGROUND COM IMAGEM E GRADIENTE ─── */}
       <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         <Image
-          src="https://images.unsplash.com/photo-1512690199101-83749a745810?q=80&w=2070&auto=format&fit=crop"
+          src="/banner-2.png"
           alt="Barber tools background"
           fill
-          className="object-cover grayscale"
+          className="object-cover grayscale opacity-40"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-950/80 to-zinc-950" />
+        <div className="absolute inset-0 bg-linear-to-b from-background via-background/80 to-background" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
