@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion, Variants } from "motion/react";
-import { Scissors, Sparkles, Ruler, Zap, ChevronRight } from "lucide-react";
+import { Scissors, Sparkles, Ruler, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 // --- Interfaces de Tipagem ---
@@ -15,7 +15,7 @@ interface Service {
   category: string;
   icon: React.ElementType;
   imageUrl: string;
-  size: "large" | "small" | "medium";
+  size: "large" | "small" | "medium" | "large-full";
   highlight?: string;
 }
 
@@ -24,7 +24,7 @@ interface Service {
 const services: Service[] = [
   {
     id: "01",
-    title: "Degradê (Fade)",
+    title: "Degradê",
     category: "Especialidade da Casa",
     description:
       "A nossa assinatura. Acabamento preciso com transição suave e técnica de ponta.",
@@ -57,24 +57,14 @@ const services: Service[] = [
   },
   {
     id: "04",
-    title: "Combo Dom Cortês",
-    category: "Experiência",
-    description: "O cuidado completo: Corte + Barba com valor exclusivo.",
-    icon: Zap,
-    imageUrl:
-      "https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    size: "medium",
-  },
-  {
-    id: "05",
-    title: "Sobrancelha & Freestyle",
+    title: "Pezinho e acabamento",
     category: "Detalhes",
     description:
-      "Alinhamento facial e desenhos personalizados para exclusividade.",
+      "Acabamento perfeito para o seu corte.",
     icon: ChevronRight,
     imageUrl:
-      "https://images.unsplash.com/photo-1596728325488-58c87691e9af?q=80&w=873&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    size: "small",
+      "https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    size: "large-full",
   },
 ];
 
@@ -144,6 +134,7 @@ export default function Services(): React.JSX.Element {
                 ${service.size === "large" ? "md:col-span-2 lg:col-span-3 lg:row-span-2 min-h-[500px]" : ""}
                 ${service.size === "medium" ? "md:col-span-2 lg:col-span-3 min-h-[300px]" : ""}
                 ${service.size === "small" ? "md:col-span-2 lg:col-span-2 min-h-[300px]" : ""}
+                ${service.size === "large-full" ? "md:col-span-2 lg:col-span-6 lg:row-span-2 min-h-[300px]" : ""}
               `}
             >
               {/* Imagem de Fundo com Overlay Progressivo */}

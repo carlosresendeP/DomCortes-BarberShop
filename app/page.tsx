@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import { ParallaxDivider } from "@/components/ParallaxDivider";
 
 import ChatBot from "@/components/ChatBot";
+import WhatsAppIcon from "@/components/whatsappIcon";
 
 
 export default function Home() {
@@ -17,8 +18,8 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        {/* <WhatsAppIcon /> */}
-        <ChatBot />
+        <WhatsAppIcon />
+        {/* <ChatBot /> */}
         <ParallaxDivider />
         <Services />
         <Pricings />

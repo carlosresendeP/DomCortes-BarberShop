@@ -20,7 +20,7 @@ export const priceCategories: PriceCategory[] = [
       {
         name: "Corte Degradê",
         description: "Técnica de fade com acabamento navalhado.",
-        price: "R$ 25,00",
+        price: "R$ 30,00",
       },
       {
         name: "Corte Social",
@@ -35,7 +35,7 @@ export const priceCategories: PriceCategory[] = [
       {
         name: "Pezinho & Acabamento",
         description: "Alinhamento de contornos e nuca.",
-        price: "R$ 10,00",
+        price: "R$ 7,00",
       },
     ],
   },
@@ -44,18 +44,8 @@ export const priceCategories: PriceCategory[] = [
     items: [
       {
         name: "Barba Completa",
-        description: "Modelagem com toalha quente e balm.",
+        description: "Barba hidratada e alinhada.",
         price: "R$ 35,00",
-      },
-      {
-        name: "Combo Dom Cortês",
-        description: "Corte Degradê + Barba Completa.",
-        price: "R$ 50,00",
-      },
-      {
-        name: "Sobrancelha",
-        description: "Alinhamento para harmonização facial.",
-        price: "R$ 5,00",
       },
     ],
   },

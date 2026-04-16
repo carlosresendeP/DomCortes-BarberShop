@@ -28,7 +28,7 @@ export default function WhatsAppIcon(): React.JSX.Element {
         className={`relative group ${isOpen ? "hidden" : "block"}`}
       >
         {/* Efeito de Pulso (Aura) */}
-        <div className="absolute inset-0 bg-success/20 rounded-full animate-ping pointer-events-none" />
+        <div className="absolute inset-0 bg-success/10 rounded-full animate-ping pointer-events-none" />
 
         <a
           href={whatsappUrl}
@@ -39,8 +39,6 @@ export default function WhatsAppIcon(): React.JSX.Element {
           {/* Alternância entre ícones (Opcional, mas elegante) */}
           <IoLogoWhatsapp className="w-8 h-8 transition-transform text-white group-hover:rotate-12" />
 
-          {/* Badge de "Online" */}
-          <span className="absolute top-0 right-0 w-3 h-3 bg-green-500 border-2 border-zinc-950 rounded-full" />
         </a>
       </motion.div>
     </div>

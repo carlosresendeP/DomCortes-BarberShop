@@ -99,7 +99,7 @@ export default function Header(): React.JSX.Element {
         <div className="flex items-center gap-4">
           <Button className="hidden md:flex bg-primary text-primary-foreground hover:bg-success rounded-none font-bold uppercase text-xs tracking-widest h-11 px-6 shadow-lg shadow-primary/10">
             <Calendar className="mr-2 w-4 h-4" />
-            Agendar
+            <a href="#contato">Contato</a>
           </Button>
 
           <button

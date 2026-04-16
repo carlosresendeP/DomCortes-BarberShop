@@ -24,8 +24,8 @@ interface Schedule {
 
 const schedule: Schedule[] = [
   { days: "Segunda a Quinta", hours: "09:00 às 19:00" },
-  { days: "Sexta-feira", hours: "08:00 às 20:00" },
-  { days: "Sábado", hours: "08:00 às 18:00" },
+  { days: "Sexta-feira", hours: "09:00 às 20:00" },
+  { days: "Sábado", hours: "09:00 às 15:00" },
   { days: "Domingo", hours: "Fechado" },
 ];
 
@@ -81,6 +81,8 @@ export default function Contact(): React.JSX.Element {
                   </span>
                 </div>
                 <p className="text-zinc-400 font-light leading-relaxed">
+                  Bairro - Várzea
+                  <br />
                   Av. Antônio da Silva Barbosa, 108
                   <br />
                   Resende Costa, MG — 36340-000
@@ -99,19 +101,21 @@ export default function Contact(): React.JSX.Element {
                 <div className="flex items-center gap-3 text-primary">
                   <Phone className="w-5 h-5" />
                   <span className="text-xs font-black uppercase tracking-widest text-zinc-100">
-                    Contato Direct
+                    Contato Direto
                   </span>
                 </div>
                 <p className="text-zinc-400 font-light leading-relaxed">
                   +55 32 99928-6816
-                  <br />
-                  barbeariadomcortes@gmail.com
                 </p>
-                <div className="flex items-center justify-start gap-2">
-                  <IoLogoInstagram className="w-7 h-7 text-zinc-600 hover:text-primary cursor-pointer transition-colors" />
-                  <span className="text-zinc-400 font-light leading-relaxed">
-                    @dom_cortes
-                  </span>
+                <div>
+                  <Button className="bg-transparent">
+                    <a href="https://www.instagram.com/dom_cortes/" className="flex items-center justify-start gap-1" target="_blank">
+                      <IoLogoInstagram className="w-10 h-10 text-zinc-600 hover:text-primary cursor-pointer transition-colors" />
+                      <span className="text-zinc-400 font-light leading-relaxed">
+                        @dom_cortes
+                      </span>
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>

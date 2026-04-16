@@ -108,7 +108,7 @@ export default function Hero(): React.JSX.Element {
             className="w-full md:w-auto h-16 px-10 bg-primary text-primary-foreground hover:bg-success transition-all rounded-none font-black uppercase tracking-widest shadow-2xl shadow-primary/20 group"
           >
             <Calendar className="mr-2 w-5 h-5" />
-            Agendar Horário
+            <a href="#precos">Ver Tabela de Preços</a>
             <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Button>
 
